@@ -83,5 +83,12 @@ public class EstruturaEstatica <T> {
     }
 
 
+    public void remove(int pos){
+         for (int i=0; i<tamanho -1; i++){
+             elementos[i] = elementos[i+1];
+         }
+         tamanho--;
+
+    }
 
 }
