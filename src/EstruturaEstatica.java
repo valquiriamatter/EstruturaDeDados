@@ -6,7 +6,7 @@ public class EstruturaEstatica <T> {
     protected int tamanho;
 
     public EstruturaEstatica(int capacidade){
-        this.elementos = (T[]) new Object[capacidade];  //solução do livro effective Java
+        this.elementos = (T[]) new Object[capacidade];
         this.tamanho = 0;
     }
 
@@ -31,7 +31,7 @@ public class EstruturaEstatica <T> {
 
     protected boolean adiciona(int posicao, T elemento){
 
-        if (!(posicao >= 0 && posicao < tamanho)){
+        if (posicao < 0 || posicao > tamanho){
             throw new IllegalArgumentException("Posição inválida");
         }
 
